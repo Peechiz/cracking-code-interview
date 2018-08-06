@@ -40,10 +40,7 @@ class LinkedList {
     }
 }
 
-let A = new LinkedList(3).add(1)
-let B = new LinkedList(2)
-
-const merge = (a, b)=>{
+const merge = (a, b) => {
     let c = new Node()
     let prev = c;
 
@@ -64,6 +61,9 @@ const merge = (a, b)=>{
 
     return c.next
 }
+
+let A = new LinkedList(3).add(1)
+let B = new LinkedList(2)
 
 A.print()
 B.print()
