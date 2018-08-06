@@ -28,6 +28,16 @@ class LinkedList {
     print(){
        this.head.print()
     }
+    static fromArray(arr, reverse = false){
+        let temp = new LinkedList(reverse ? arr[arr.length -1] : arr[0] )
+        if (reverse) {
+            arr.reverse().slice(1).forEach(x => temp.add(x)) 
+        }
+        else {
+            arr.slice(1).forEach(x => temp.add(x))
+        }
+        return temp
+    }
 }
 
 let A = new LinkedList(3).add(1)
@@ -58,3 +68,6 @@ const merge = (a, b)=>{
 A.print()
 B.print()
 merge(A.head, B.head).print()
+
+// let D = LinkedList.fromArray([1,2,3,4,5], true)
+// D.print()
